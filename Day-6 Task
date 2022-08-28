@@ -1,0 +1,37 @@
+//Write a “person” class to hold all the details
+
+class Person{
+    constructor(firstNameInput, lastNameInput, ageInput){
+        this.firstName = firstNameInput;
+        this.lastName  = lastNameInput;
+        this.age       = ageInput;
+    }
+};
+
+var person1 = new Person("Harry", "Potter", 16);
+var person2 = new Person("Ron", "Weasley", 16);
+var person3 = new Person("Hermione", "Granger", 16);
+console.log(person1);
+console.log(person2);
+console.log(person3);
+
+
+
+//Write a class to calculate uber price
+
+function counter (distance) {
+    let totalCost = 0, dist = distance * 1000;
+    for (let m=1; m<=dist; m++) {
+        if (m<=100)
+        totalCost += 100;
+        else totalCost += (m<=500)?50:10;
+    }
+    return totalCost;
+}
+
+console.log(1000*.001, counter(.001))
+console.log(1000*.01, counter(.01))
+console.log(1000*.1, counter(.1))
+console.log(1000*.2, counter(.2))
+console.log(1000*.5, counter(.5))
+console.log(1000, counter(1))
